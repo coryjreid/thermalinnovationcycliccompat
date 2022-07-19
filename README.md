@@ -6,6 +6,12 @@ Currently, this mod does the following:
 
 * Allows Thermal Innovation's Flux Bore/Saw to receive the Experience Boost enchantment
 
+## CurseForge
+
+This mod is only distributed on CurseForge.
+
+https://www.curseforge.com/minecraft/mc-mods/thermal-innovation-cyclic-compat
+
 ## Dependencies
 
 * Minecraft 1.16.5
