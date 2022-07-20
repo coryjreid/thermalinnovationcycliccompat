@@ -1,15 +1,26 @@
-package com.aezshma.thermalinnovationcycliccompat.item;
+package com.coryjreid.thermalinnovationcycliccompat.item;
 
 import com.lothrazar.cyclic.ModCyclic;
 import com.lothrazar.cyclic.enchant.EnchantXp;
 
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class RFSawItem extends cofh.thermal.innovation.item.RFSawItem {
-    public RFSawItem(Properties builder, int maxEnergy, int maxTransfer) {
+import cofh.thermal.innovation.item.RFDrillItem;
+
+/**
+ * An {@link RFDrillItem} which permits {@link EnchantXp}.
+ */
+public class CustomFluxbore extends RFDrillItem {
+
+    public static final String ID = "flux_drill";
+    public static final int MAX_ENERGY = 50000;
+    public static final int MAX_TRANSFER = 1000;
+
+    public CustomFluxbore(Item.Properties builder, int maxEnergy, int maxTransfer) {
         super(builder, maxEnergy, maxTransfer);
         setupEnchants();
     }
@@ -20,7 +31,7 @@ public class RFSawItem extends cofh.thermal.innovation.item.RFSawItem {
     }
 
     public static void setupEnchants() {
-        cofh.thermal.innovation.item.RFDrillItem.setupEnchants();
+        RFDrillItem.setupEnchants();
         VALID_ENCHANTS.add(ForgeRegistries.ENCHANTMENTS.getValue(new ResourceLocation(ModCyclic.MODID, EnchantXp.ID)));
     }
 }
